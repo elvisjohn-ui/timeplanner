@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Journal - Time Planner System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Personal Journal</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="mood.html">Mood Tracker</a>
+      <a href="journal.html" class="active">Journal</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="journal-form">
+      <h2>Write a New Entry</h2>
+      <form id="journalForm">
+        <textarea id="journalText" placeholder="Write your thoughts..." rows="5" required></textarea>
+        <button type="submit">Save Entry</button>
+      </form>
+    </section>
+
+    <section class="journal-list">
+      <h2>Your Journal Entries</h2>
+      <ul id="journalList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Time Planner Project | Developed by Elvis John Thuku Mwaura</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

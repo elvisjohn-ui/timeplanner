@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Tracker - Time Planner System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mood Tracker</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="mood.html" class="active">Mood Tracker</a>
+      <a href="journal.html">Journal</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="mood-form">
+      <h2>How are you feeling today?</h2>
+      <form id="moodForm">
+        <select id="moodSelect" required>
+          <option value="">-- Select Mood --</option>
+          <option value="😊 Happy">😊 Happy</option>
+          <option value="😔 Sad">😔 Sad</option>
+          <option value="😡 Angry">😡 Angry</option>
+          <option value="😌 Calm">😌 Calm</option>
+          <option value="😴 Tired">😴 Tired</option>
+          <option value="😃 Excited">😃 Excited</option>
+        </select>
+        <textarea id="moodNote" placeholder="Add a note (optional)" rows="3"></textarea>
+        <button type="submit">Save Mood</button>
+      </form>
+    </section>
+
+    <section class="mood-list">
+      <h2>Your Mood History</h2>
+      <ul id="moodList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Time Planner Project | Developed by Elvis John Thuku Mwaura</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* ===== Root Colors ===== */
+:root {
+  --primary: #6c63ff;    /* purple-blue */
+  --secondary: #00b894;  /* teal green */
+  --light: #f9f9ff;
+  --dark: #2d3436;
+  --text: #333;
+}
+
+/* ===== Global Styles ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: center; /* center text globally */
+}
+
+/* ===== Header & Nav ===== */
+header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+nav {
+  margin-top: 12px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-bottom: 4px;
+  transition: 0.2s;
+}
+
+nav a.active,
+nav a:hover {
+  border-bottom: 3px solid white;
+}
+
+/* ===== Main Container ===== */
+main {
+  padding: 25px;
+  max-width: 1000px;   /* keeps content centered */
+  margin: 0 auto;      /* centers horizontally */
+  text-align: center;  /* aligns all text in the middle */
+}
+
+footer {
+  text-align: center;
+  background: var(--dark);
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+/* ===== Home Page ===== */
+.welcome {
+  margin: 40px 0 20px;
+}
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.card p {
+  flex-grow: 1;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 18px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--secondary);
+}
+
+/* ===== Generic Sections (About, Tasks, Journal, Mood) ===== */
+section {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* ===== Forms ===== */
+form input,
+form select,
+form textarea,
+form button {
+  width: 90%;
+  padding: 12px;
+  margin: 8px auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  display: block; /* keeps form inputs stacked neatly */
+}
+
+form button {
+  background: var(--secondary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+}
+
+form button:hover {
+  background: var(--primary);
+}
+
+/* ===== Lists (Tasks, Journal, Mood) ===== */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px auto;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  max-width: 650px;
+}
+
+li button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+li button:nth-child(1) { background: #00cec9; color: white; }
+li button:nth-child(2) { background: #fdcb6e; color: white; }
+li button:nth-child(3) { background: #d63031; color: white; }
+
+li button:hover {
+  opacity: 0.85;
+}
+
+/* ===== Search & Filter Inputs ===== */
+input[type="text"], select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  display: block;
+}
