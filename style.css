@@ -15,7 +15,7 @@ body {
   background: var(--light);
   color: var(--text);
   line-height: 1.6;
-  text-align: center; /* center text globally */
+  text-align: center;
 }
 
 /* ===== Header & Nav ===== */
@@ -53,9 +53,9 @@ nav a:hover {
 /* ===== Main Container ===== */
 main {
   padding: 25px;
-  max-width: 1000px;   /* keeps content centered */
-  margin: 0 auto;      /* centers horizontally */
-  text-align: center;  /* aligns all text in the middle */
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 footer {
@@ -121,7 +121,7 @@ footer {
   background: var(--secondary);
 }
 
-/* ===== Generic Sections (About, Tasks, Journal, Mood) ===== */
+/* ===== Generic Sections ===== */
 section {
   max-width: 700px;
   margin: 20px auto;
@@ -143,7 +143,7 @@ form button {
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 14px;
-  display: block; /* keeps form inputs stacked neatly */
+  display: block;
 }
 
 form button {
@@ -159,7 +159,7 @@ form button:hover {
   background: var(--primary);
 }
 
-/* ===== Lists (Tasks, Journal, Mood) ===== */
+/* ===== Lists ===== */
 ul {
   list-style: none;
   padding: 0;
@@ -187,9 +187,9 @@ li button {
   transition: 0.2s;
 }
 
-li button:nth-child(1) { background: #00cec9; color: white; }
-li button:nth-child(2) { background: #fdcb6e; color: white; }
-li button:nth-child(3) { background: #d63031; color: white; }
+li button:nth-child(1) { background: #00cec9; color: white; }   /* Done/Undo */
+li button:nth-child(2) { background: #fdcb6e; color: white; }   /* Edit */
+li button:nth-child(3) { background: #d63031; color: white; }   /* Delete */
 
 li button:hover {
   opacity: 0.85;
@@ -204,4 +204,67 @@ input[type="text"], select {
   border: 1px solid #ccc;
   font-size: 14px;
   display: block;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 14px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  .quick-links {
+    grid-template-columns: 1fr; /* stack cards on phones */
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  section {
+    padding: 15px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li button {
+    margin: 5px 5px 0 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  form input,
+  form select,
+  form textarea,
+  form button {
+    width: 100%;
+  }
 }
